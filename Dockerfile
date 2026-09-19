@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM python:latest
 
 WORKDIR /app
 
@@ -13,4 +13,5 @@ COPY . .
 ENV PORT=8050
 EXPOSE 8050
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8050", "src.app:server"]
+# CMD ["gunicorn", "--bind", "0.0.0.0:8050", "src.app:server"]
+CMD ["sleep", "infinity"]
